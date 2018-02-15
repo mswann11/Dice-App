@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="marginTop">75dp</dimen>
+    <dimen name="layoutWidth">0dp</dimen>
+    <dimen name="teamTextSize">20sp</dimen>
+    <dimen name="scoreTextSize">44sp</dimen>
+    <dimen name="marginButtonVertical">3dp</dimen>
+    <dimen name="marginButtonHorizontal">16dp</dimen>
+    <dimen name="buttonTextSize">16sp</dimen>
+    <dimen name="buttonPaddingVertical">5dp</dimen>
+    <dimen name="shadowX">3</dimen>
+    <dimen name="shadowY">3</dimen>
+    <dimen name="shadowR">1.5</dimen>
+    <dimen name="resetPadding">24dp</dimen>
+    <dimen name="marginReset">90dp</dimen>
+</resources>

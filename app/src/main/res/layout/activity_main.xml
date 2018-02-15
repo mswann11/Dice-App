@@ -1,0 +1,342 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="10"
+            android:src="@drawable/dice_one" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="70"
+            android:src="@drawable/dice_two" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="20"
+            android:src="@drawable/dice_three" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="80"
+            android:src="@drawable/dice_four" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="30"
+            android:src="@drawable/dice_five" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:rotation="160"
+            android:src="@drawable/dice_six" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/marginTop"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Lollipops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/lollipops"
+                android:textColor="@color/teamName"
+                android:textSize="@dimen/teamTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/_0"
+                android:textColor="@color/score"
+                android:textSize="@dimen/scoreTextSize" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button1"
+                android:onClick="threeOfAKindForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/_3_of_a_kind"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button2"
+                android:onClick="smallStraightForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/sm_straight"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button3"
+                android:onClick="fullHouseForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/full_house"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button4"
+                android:onClick="fourOfAKindForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/_4_of_a_kind"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button5"
+                android:onClick="largeStraightForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/lg_straight"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button6"
+                android:onClick="yahtzeeForTeamA"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/yahtzee_50"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/layoutWidth"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/gumdrops"
+                android:textColor="@color/teamName"
+                android:textSize="@dimen/teamTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/_0"
+                android:textColor="@color/score"
+                android:textSize="@dimen/scoreTextSize" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button1"
+                android:onClick="threeOfAKindForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/_3_of_a_kind"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button2"
+                android:onClick="smallStraightForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/sm_straight"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button3"
+                android:onClick="fullHouseForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/full_house"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button4"
+                android:onClick="fourOfAKindForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/_4_of_a_kind"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button5"
+                android:onClick="largeStraightForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/lg_straight"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginButtonHorizontal"
+                android:layout_marginVertical="@dimen/marginButtonVertical"
+                android:background="@color/button6"
+                android:onClick="yahtzeeForTeamB"
+                android:paddingVertical="@dimen/buttonPaddingVertical"
+                android:shadowColor="@color/shadow"
+                android:shadowDx="@dimen/shadowX"
+                android:shadowDy="@dimen/shadowY"
+                android:shadowRadius="@dimen/shadowR"
+                android:text="@string/yahtzee_50"
+                android:textSize="@dimen/buttonTextSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/marginReset"
+        android:background="@color/reset"
+        android:onClick="reset"
+        android:paddingHorizontal="@dimen/resetPadding"
+        android:paddingVertical="@dimen/marginButtonVertical"
+        android:shadowColor="@color/shadow"
+        android:shadowDx="@dimen/shadowX"
+        android:shadowDy="@dimen/shadowY"
+        android:shadowRadius="@dimen/shadowR"
+        android:text="@string/reset"
+        android:textSize="@dimen/buttonTextSize"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/border_crop" />
+
+</RelativeLayout>
