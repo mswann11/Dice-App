@@ -1,5 +1,6 @@
 package com.example.android.candydice;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,17 +11,38 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Tracks score for Team A.
      */
-    int scoreTeamA = 0;
+    int scoreTeamA=0;
 
     /**
      * Tracks score for Team B.
      */
-    int scoreTeamB = 0;
+    int scoreTeamB=0;
+
+    TextView scoreAView;
+    TextView scoreBView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        scoreAView = (TextView) findViewById(R.id.team_a_score);
+        scoreBView = (TextView) findViewById(R.id.team_b_score);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState){
+        outState.putInt("scoreTeamA", scoreTeamA);
+        outState.putInt("scoreTeamB", scoreTeamB);
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        scoreTeamA = savedInstanceState.getInt("scoreTeamA");
+        scoreTeamB = savedInstanceState.getInt("scoreTeamB");
+        scoreAView.setText(String.valueOf(scoreTeamA));
+        scoreBView.setText(String.valueOf(scoreTeamB));
     }
 
     /**
@@ -36,14 +58,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void smallStraightForTeamA(View view) {
         scoreTeamA += 20;
-        displayForTeamA(scoreTeamA);
-    }
-
-    /**
-     * Adds 25 points to the score for Team A.
-     */
-    public void fullHouseForTeamA(View view) {
-        scoreTeamA += 25;
         displayForTeamA(scoreTeamA);
     }
 
@@ -75,8 +89,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreAView.setText(String.valueOf(score));
     }
 
     /**
@@ -92,14 +105,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void smallStraightForTeamB(View view) {
         scoreTeamB += 20;
-        displayForTeamB(scoreTeamB);
-    }
-
-    /**
-     * Adds 25 points to the score for Team B.
-     */
-    public void fullHouseForTeamB(View view) {
-        scoreTeamB += 25;
         displayForTeamB(scoreTeamB);
     }
 
@@ -131,8 +136,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Team B.
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreBView.setText(String.valueOf(score));
     }
 
     /**

@@ -13,7 +13,7 @@
         <LinearLayout
             android:id="@+id/dice"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/diceHeight"
+            android:layout_height="@dimen/diceHeightLand"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/marginReset"
             android:layout_marginLeft="@dimen/marginReset"
@@ -22,32 +22,32 @@
             android:orientation="horizontal">
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="10"
                 android:src="@drawable/dice_one" />
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="70"
                 android:src="@drawable/dice_two" />
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="20"
                 android:src="@drawable/dice_three" />
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="80"
                 android:src="@drawable/dice_four" />
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="30"
                 android:src="@drawable/dice_five" />
 
             <ImageView
-                style="@style/dice"
+                style="@style/dice_land"
                 android:rotation="160"
                 android:src="@drawable/dice_six" />
 
@@ -75,31 +75,31 @@
                     android:id="@+id/team_a_score" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:onClick="threeOfAKindForTeamA"
                     android:text="@string/_3_of_a_kind"
                     android:background="@drawable/round_button1" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button2"
                     android:onClick="smallStraightForTeamA"
                     android:text="@string/sm_straight" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button3"
                     android:onClick="fourOfAKindForTeamA"
                     android:text="@string/_4_of_a_kind" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button4"
                     android:onClick="largeStraightForTeamA"
                     android:text="@string/lg_straight" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button5"
                     android:onClick="yahtzeeForTeamA"
                     android:text="@string/yahtzee_50" />
@@ -128,31 +128,31 @@
                     style="@style/scores" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button1"
                     android:onClick="threeOfAKindForTeamB"
                     android:text="@string/_3_of_a_kind" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button2"
                     android:onClick="smallStraightForTeamB"
                     android:text="@string/sm_straight" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button3"
                     android:onClick="fourOfAKindForTeamB"
                     android:text="@string/_4_of_a_kind" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button4"
                     android:onClick="largeStraightForTeamB"
                     android:text="@string/lg_straight" />
 
                 <Button
-                    style="@style/buttons"
+                    style="@style/buttons_land"
                     android:background="@drawable/round_button5"
                     android:onClick="yahtzeeForTeamB"
                     android:text="@string/yahtzee_50" />
@@ -170,8 +170,8 @@
             android:fontFamily="casual"
             android:onClick="reset"
             android:layout_margin="@dimen/marginReset"
-            android:paddingLeft="@dimen/resetPadding"
-            android:paddingRight="@dimen/resetPadding"
+            android:paddingLeft="@dimen/resetPaddingLand"
+            android:paddingRight="@dimen/resetPaddingLand"
             android:paddingTop="@dimen/marginButtonVertical"
             android:paddingBottom="@dimen/marginButtonVertical"
             android:text="@string/reset"
@@ -182,13 +182,15 @@
             android:translationZ="@dimen/shadow" />
 
         <ImageView
+            android:id="@+id/border"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="@dimen/margin"
+            android:layout_below="@id/button"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/sweets" />
+            android:paddingTop="@dimen/marginReset"
+            android:src="@drawable/sweets_land"
+            android:scaleType="fitEnd"/>
 
     </RelativeLayout>
 </ScrollView>

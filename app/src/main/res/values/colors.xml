@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#d65cad</color>
+    <color name="colorButtonNormal">#d65cad</color>
+    <color name="colorPrimaryDark">#66194d</color>
     <color name="colorAccent">#FF4081</color>
     <color name="background">#c1f0f0</color>
     <color name="teamName">#cc3399</color>
     <color name="score">#66194d</color>
-    <color name="shadow">#7F000000</color>
-    <color name="button1">#d65cad</color>
-    <color name="button2">#8533ff</color>
-    <color name="button3">#3399ff</color>
-    <color name="button4">#33ff77</color>
-    <color name="button5">#ffff00</color>
-    <color name="button6">#ff751a</color>
-    <color name="reset">#ff3333</color>
+    <color name="button1">#FF78BB</color>
+    <color name="button2">#7647A2</color>
+    <color name="button3">#3299FF</color>
+    <color name="button4">#59D659</color>
+    <color name="button5">#ffdd42</color>
+    <color name="reset">#FF4646</color>
+    <color name="line">#C0C0C0</color>
 </resources>
